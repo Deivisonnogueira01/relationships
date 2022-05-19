@@ -22,8 +22,8 @@ import lombok.NoArgsConstructor;
 public class Funcionario {
  
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
 
     private String nome;
     private double salario;
