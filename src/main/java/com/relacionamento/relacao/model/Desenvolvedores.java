@@ -19,7 +19,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Data
 @Entity
-public class Funcionario {
+public class Desenvolvedores {
  
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -34,5 +34,5 @@ public class Funcionario {
         joinColumns = {@JoinColumn(name = "FUNCIONARIO_ID")},
         inverseJoinColumns = {@JoinColumn(name = "PROJETO_ID")}
     )
-    private List<Projeto> projetos;
+    private List<Startup> projetos;
 }

@@ -1,5 +1,5 @@
 package com.relacionamento.relacao.controller;
 
-public class Funcionario {
+public class DesenvolvedoresController {
     
 }

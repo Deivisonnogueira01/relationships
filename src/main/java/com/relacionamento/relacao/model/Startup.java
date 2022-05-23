@@ -18,7 +18,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Entity
 @Data
-public class Projeto {
+public class Startup {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -33,5 +33,5 @@ public class Projeto {
     @ManyToMany(cascade = CascadeType.ALL)
     @JoinTable(name = "FUNCIONARIO_PROJETO", joinColumns = { @JoinColumn(name = "PROJETO_ID") }, inverseJoinColumns = {
             @JoinColumn(name = "FUNCIONARIO_ID") })
-    private List<Funcionario> funcionarios;
+    private List<Desenvolvedores> funcionarios;
 }

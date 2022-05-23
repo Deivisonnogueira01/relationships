@@ -1,13 +1,13 @@
 package com.relacionamento.relacao.repository;
 
-import com.relacionamento.relacao.model.Funcionario;
+import com.relacionamento.relacao.model.Desenvolvedores;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 
 @Repository
-public interface FuncionarioRepository  extends JpaRepository<Integer,Funcionario>{
+public interface FuncionarioRepository  extends JpaRepository<Desenvolvedores,Integer>{
     
 
 }
