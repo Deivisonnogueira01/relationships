@@ -1,5 +1,10 @@
 package com.relacionamento.relacao.repository;
 
-public interface StartupRepository {
+import com.relacionamento.relacao.model.Startup;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface StartupRepository  extends JpaRepository<Startup, Integer> {
+    
     
 }

@@ -7,7 +7,8 @@ import org.springframework.stereotype.Repository;
 
 
 @Repository
-public interface FuncionarioRepository  extends JpaRepository<Desenvolvedores,Integer>{
+public interface DesenvolvedorRepository  extends JpaRepository<Desenvolvedores,Integer>{
     
 
+    
 }

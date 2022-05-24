@@ -22,16 +22,16 @@ public class Startup {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Integer idStartup;
 
-    private String name;
+    private String nameStartup;
 
     private double custoTotal;
 
     private int duracao;
 
     @ManyToMany(cascade = CascadeType.ALL)
-    @JoinTable(name = "FUNCIONARIO_PROJETO", joinColumns = { @JoinColumn(name = "PROJETO_ID") }, inverseJoinColumns = {
-            @JoinColumn(name = "FUNCIONARIO_ID") })
+    @JoinTable(name = "DESENVOLVEDORES_STARTUP", joinColumns = { @JoinColumn(name = "STARTUP_ID") }, inverseJoinColumns = {
+            @JoinColumn(name = "DESENVOLVEDORES_ID") })
     private List<Desenvolvedores> funcionarios;
 }

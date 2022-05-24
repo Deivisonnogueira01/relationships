@@ -27,12 +27,14 @@ public class Desenvolvedores {
 
     private String nome;
     private double salario;
+    private String especializacao;
+    
 
     @ManyToMany(cascade = CascadeType.ALL)
     @JoinTable(
-        name = "PROJETO_FUNCIONARIO",
-        joinColumns = {@JoinColumn(name = "FUNCIONARIO_ID")},
-        inverseJoinColumns = {@JoinColumn(name = "PROJETO_ID")}
+        name = "STARTUP_DEV",
+        joinColumns = {@JoinColumn(name = "DESENVOLVEDOR_ID")},
+        inverseJoinColumns = {@JoinColumn(name = "STARTUP_ID")}
     )
-    private List<Startup> projetos;
+    private List<Startup>  startups;
 }
