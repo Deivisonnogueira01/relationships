@@ -1,5 +1,7 @@
 package com.relacionamento.relacao.services;
 
+import java.util.List;
+
 import com.relacionamento.relacao.model.Startup;
 import com.relacionamento.relacao.repository.StartupRepository;
 
@@ -10,8 +12,8 @@ public class StartupService {
     
      StartupRepository repository;
      
-     public void buscaStartup(Startup  starstup){
-           repository.findAll();
+     public List<Startup> buscaStartup(){
+         return repository.findAll();
 
      }
 
