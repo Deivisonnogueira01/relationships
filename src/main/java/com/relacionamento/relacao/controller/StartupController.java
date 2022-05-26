@@ -25,19 +25,19 @@ public class StartupController {
 @Autowired
 private StartupService service;
 
-@GetMapping("/newDev")
+@GetMapping("/newStartup")
 public ModelAndView newProdutos(){
-    ModelAndView mv = new ModelAndView("desenvolvedores");
+    ModelAndView mv = new ModelAndView("startups");
     Startup star = new Startup();
-    mv.addObject("devsObj", star);
+    mv.addObject("startupObj", star);
     return mv;
 }
 
 @GetMapping("/listarStartup")
 public ModelAndView listarTodosProdutos(){
-    ModelAndView mv = new ModelAndView("listaDeDevs");
+    ModelAndView mv = new ModelAndView("listaDeStartup");
    List<Startup> listStartup = this.service.buscaStartup();
-   mv.addObject("DevListObj", listStartup);
+   mv.addObject("startupListObj", listStartup);
    return mv;
 }
 

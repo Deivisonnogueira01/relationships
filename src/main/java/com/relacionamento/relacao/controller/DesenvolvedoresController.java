@@ -25,7 +25,7 @@ public class DesenvolvedoresController {
 private DesenvolvedoresService service;
 
 @GetMapping("/newDev")
-public ModelAndView newProdutos(){
+public ModelAndView novoDev(){
     ModelAndView mv = new ModelAndView("desenvolvedores");
     Desenvolvedores devs = new Desenvolvedores();
     mv.addObject("devsObj", devs);
@@ -33,7 +33,7 @@ public ModelAndView newProdutos(){
 }
 
 @GetMapping("/listarDevs")
-public ModelAndView listarTodosProdutos(){
+public ModelAndView listarDevs(){
     ModelAndView mv = new ModelAndView("listaDeDevs");
    List<Desenvolvedores> listDevs = this.service.getDesenvolvedores();
    mv.addObject("DevListObj", listDevs);

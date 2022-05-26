@@ -22,7 +22,7 @@ public class EnderecoController {
     private EnderecoService service;
 
     @PutMapping("/atualizaEndereco")
-    public ModelAndView salvarDev(@ModelAttribute @Valid Endereço end, BindingResult result,
+    public ModelAndView salvarEndereco(@ModelAttribute @Valid Endereço end, BindingResult result,
             RedirectAttributes redirect) {
         if (result.hasErrors()) {
             return new ModelAndView("redirect erro");
