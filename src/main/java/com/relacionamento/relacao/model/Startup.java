@@ -9,6 +9,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+import javax.persistence.OneToOne;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -34,4 +35,8 @@ public class Startup {
     @JoinTable(name = "DESENVOLVEDORES_STARTUP", joinColumns = { @JoinColumn(name = "STARTUP_ID") }, inverseJoinColumns = {
             @JoinColumn(name = "DESENVOLVEDORES_ID") })
     private List<Desenvolvedores> funcionarios;
+
+    @OneToOne
+    private Endereço endereço;
+    
 }

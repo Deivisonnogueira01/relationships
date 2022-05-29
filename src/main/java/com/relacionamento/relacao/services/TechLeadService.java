@@ -1,5 +1,7 @@
 package com.relacionamento.relacao.services;
 
+import java.util.List;
+
 import com.relacionamento.relacao.model.TechLead;
 import com.relacionamento.relacao.repository.TechLeadRepository;
 
@@ -10,8 +12,8 @@ public class TechLeadService {
     
     TechLeadRepository repository;
 
-    public void identificaTech(TechLead tech){
-        repository.findAll();
+    public List<TechLead>  identificaTech(){
+        return repository.findAll();
     }
 
     public void insereTech(TechLead tech){

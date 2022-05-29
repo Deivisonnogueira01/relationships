@@ -17,7 +17,7 @@ public class Endereço {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-     private  Integer codIndemtificador;
+     private  Integer codIndentificador;
      private String rua;
      private String bairro;
      private String cep;
